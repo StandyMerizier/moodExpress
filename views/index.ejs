@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How you feeling today?</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Let me know how you are feeling today</h1>
+  <h2>Express yourself, Don't stress yourself</h2>
+
+
+  <h3>Mood & Reflections</h3>
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].msg %></span>
+      <a id="edit" class="tool hidden">Edit</a>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Let It All Out</h2>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="message" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

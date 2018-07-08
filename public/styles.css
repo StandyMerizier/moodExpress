@@ -1,0 +1,23 @@
+body{
+  background: purple;
+}
+h3{
+  margin-top: 40px;
+}
+
+.tool {
+  cursor: pointer;
+  display: inline-block;
+  z-index: 10;
+}
+.tool.hidden{
+  display: none;
+}
+ul li a{
+  padding-right: 10px;
+  display: inline;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
